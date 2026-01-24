@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kannaujiyalaundryhub</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/book.css">
+
+</head>
+
+<body>
+
+  <!-- <div id="loader">
+    <div class="spinner"></div>
+</div> -->
+
+
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/Kannaujiya-Laundry-deoria.png" alt="Kannaujiya-Laundry-deoria">
+    </div>
+
+    <nav id="nav-menu" class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="service.html">Services</a>
+      <a href="price.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="book.html" class="btn-primary desktop-btn">Book Pickup</a>
+
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <section class="pickup-section">
+    <h2>Book Your Pickup</h2>
+    <p class="subtitle">
+      Schedule a convenient time for us to pick up your laundry. We'll handle the rest!
+    </p>
+
+    <div class="pickup-container">
+
+      <!-- LEFT FORM -->
+      <form action="bookPickup" method="post" id="bookingForm">
+
+        <label>Booking Id</label>
+        <input type="tel"  name="booking_id" readonly id="bookingId">
+
+        <label>Full Name *</label>
+        <input type="text" name="name" required>
+
+        <label>Phone Number *</label>
+        <input type="tel" name="phone" required>
+
+        
+
+        <label>Address *</label>
+        <textarea name="address" required></textarea>
+
+        <label>Service Type *</label>
+        <select name="service" required>
+          <option value="">Select a service</option>
+          <option>Wash & Iron</option>
+          <option>Dry Clean</option>
+          <option>Ironing</option>
+          <option>Express Service</option>
+          <option>Bag Cleaning </option>
+          <option>Blanket Cleaning </option>
+          <option>Sofa Cleaning </option>
+        </select>
+
+        <div class="row">
+          <div>
+            <label>Pickup Date *</label>
+            <input type="date" name="pickupDate" required>
+          </div>
+          <div>
+            <label>Pickup Time *</label>
+            <input type="time" name="pickupTime" required>
+          </div>
+        </div>
+
+        <button class="btn">Confirm Booking</button>
+
+      </form>
+
+      <!-- RIGHT SIDE -->
+      <div class="right-side">
+
+        <div class="card whatsapp-card">
+          <h4>📱 Book via WhatsApp</h4>
+          <p>
+            Prefer to book through WhatsApp? Click the button below to send your booking details directly.
+          </p>
+          <button class="whatsapp-btn" onclick="whatsappBooking()">
+            📱 WhatsApp Booking
+          </button>
+        </div>
+
+        <div class="card info-card">
+          <h4>🕒 Pickup Information</h4>
+          <ul>
+            <li>⏰ Pickup Timings: <strong>Mon–Sun, 9AM–8PM</strong></li>
+            <li>⚡ Turnaround Time: <strong>24–48 hours</strong></li>
+            <li>📍 Service Area: <strong>Local city limits</strong></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Brand -->
+      <div class="footer-col brand">
+        <div class="footer-logo">
+          <span>K</span>Kannaujiya Laundry Hub
+        </div>
+         <p>
+          <i>"Weaving Freshness into Every Thread!"</i>
+          
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="price.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <ul class="contact-info">
+          <li>📞 +91 84232 45432</li>
+          <li>✉️ kannaujiyalaundryhub@gmail.com</li>
+          <li>📍 Purwa, Gorkhpur-Deoria Highway (In front of Kia Car Showroom), Deoria, Uttar Pradesh, India</li>
+        </ul>
+      </div>
+
+      <!-- Certificate Info -->
+      <div class="footer-col">
+        <h4>Certificates</h4>
+        <ul class="contact-info">
+          <li>MSME Registered</li>
+          <li>ISO 9001-2015 Certified</li>
+          <li>IID Certified</li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/1C7BhtLhia/">f</a>
+          <a href="https://www.instagram.com/kannaujiyalaundryhub?igsh=cmxrNXN1dXM1eGV3">i</a>
+          <a href="https://youtube.com/@kannaujiyalaundryhub?si=3e7CDZ7JSqD-jcs0">Y</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Kannaujiya Laundry Hub. All rights reserved.
+    </div>
+  </footer>
+
+
+  <div id="successOverlay" class="success-overlay">
+    <div class="success-box">
+      <div class="checkmark">✓</div>
+      <h3>Booking Confirmed!</h3>
+      <p>
+        <i>"Weaving Freshness into Every Thread!"</i>
+
+      </p>
+      <button onclick="closeSuccess()">OK</button>
+    </div>
+  </div>
+
+  <!-- toast alert -->
+  <div id="toast" class="toast"></div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("DSYs7sI_7zHUeToE2"); // emailjs dashboard se
+    })();
+  </script>
+
+
+  <script>
+    let isSubmitting = false; // 🔒 guard flag
+
+    document.getElementById("bookingForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // 🚫 prevent double submit
+      if (isSubmitting) return;
+      isSubmitting = true;
+
+      emailjs.sendForm(
+        "service_9l12vgb",
+        "template_xykiqum",
+        this
+      ).then(function () {
+
+        // ✅ show success animation
+        document.getElementById("successOverlay").classList.add("active");
+
+        // ✅ reset form
+        document.getElementById("bookingForm").reset();
+
+        isSubmitting = false; // unlock after success
+
+      }, function (error) {
+        alert("❌ Booking failed. Please try again.");
+        console.log(error);
+        isSubmitting = false; // unlock on error
+      });
+    });
+
+    function closeSuccess() {
+      document.getElementById("successOverlay").classList.remove("active");
+    }
+  </script>
+
+
+  <script src="js/hamburger.js"></script>
+  <script src="js/whatsapp.js"></script>
+
+
+</body>
+
+</html>
