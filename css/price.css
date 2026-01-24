@@ -1,0 +1,140 @@
+/* PRICING */
+.pricing-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.pricing-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    max-width: 600px;
+    margin: auto;
+    font-size: 15px;
+}
+
+/* GRID */
+.pricing-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CARD */
+.price-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #e6eaf0;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.price-card h4 {
+    font-size: 15px;
+    color: #333;
+}
+
+.price-card h3 {
+    font-size: 26px;
+    color: #2563eb;
+    margin: 12px 0;
+}
+
+.price-card h3 span {
+    font-size: 14px;
+    color: #777;
+}
+
+.price-card ul {
+    padding-left: 18px;
+}
+
+.price-card ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Highlight */
+.highlight {
+    border: 2px solid #2563eb;
+}
+
+/* OFFER */
+.offer-section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.offer-box {
+    margin-top: 30px;
+    background: linear-gradient(90deg, #2563eb, #22c55e);
+    color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* CTA */
+.cta-section {
+    padding: 80px 20px;
+    text-align: center;
+   background: #25a8db;
+background: linear-gradient(90deg, rgba(37, 168, 219, 1) 71%, rgba(57, 213, 186, 1) 100%, rgba(64, 230, 185, 1) 100%, rgba(66, 227, 180, 1) 100%, rgba(87, 199, 133, 1) 100%, rgba(237, 221, 83, 1) 100%);
+}
+
+.cta-section h3 {
+    font-size: 28px;
+}
+
+.cta-section p {
+    margin: 10px 0 25px;
+    color: #222222;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 992px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .offer-box {
+        text-align: center;
+        gap: 15px;
+    }
+}
